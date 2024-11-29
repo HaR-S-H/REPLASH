@@ -14,7 +14,7 @@ import shoppingRoute from './routes/shopping.route.js'
 import dashboard from './routes/dashboard.route.js';
 import 'dotenv/config'
 
-const app = express();
+const app = express()
 import path from 'path';
 
 // const __dirname = path.resolve();
