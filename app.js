@@ -28,7 +28,7 @@ import path from 'path';
 
 
 const corsOptions = {
-  origin: 'https://grand-semifreddo-3dbb6a.netlify.app',
+  origin: 'https://silly-tiramisu-1518ff.netlify.app',
   credentials: true,
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   optionsSuccessStatus: 200
