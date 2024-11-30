@@ -28,7 +28,7 @@ import path from 'path';
 
 
 const corsOptions = {
-  origin: 'https://replash-frontend.vercel.app/',
+  origin: 'https://replash-frontend.vercel.app',
   credentials: true,
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   optionsSuccessStatus: 200
