@@ -9,6 +9,8 @@ export const setUserStatus = async (req, res) => {
         let  status  = req.body;
         let user = req.cookies.user;
         user = await JSON.parse(user);
+        console.log(user, status);
+        
         status.user = user;
         status=calculateCalories(status);
         calculateMacros(status);
