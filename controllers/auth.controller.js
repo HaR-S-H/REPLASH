@@ -31,8 +31,9 @@ export const signup = async (req, res) => {
                 res.cookie('user', JSON.stringify(user), { httpOnly: false, secure: true });
                 // Set the second cookie
                 res.cookie('authToken', token, {
-                    httpOnly: false,
+                    httpOnly:true,
                     secure: true,
+                    sameSite: 'None'
                 });
                 // Now send the response once after setting both cookies
                 res.send({ token: token, user: user });

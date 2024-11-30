@@ -8,8 +8,11 @@ export const setUserStatus = async (req, res) => {
     try {
         let  status  = req.body;
         let user = req.cookies.user;
+        console.log(status,user);
+        
         user = await JSON.parse(user);
         console.log(user, status);
+        console.log("hra");
         
         status.user = user;
         status=calculateCalories(status);
