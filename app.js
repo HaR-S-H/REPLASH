@@ -28,7 +28,7 @@ import path from 'path';
 
 
 const corsOptions = {
-  origin: 'http://localhost:5173',
+  origin: 'https://replash-frontend.vercel.app/',
   credentials: true,
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   optionsSuccessStatus: 200
