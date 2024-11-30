@@ -28,7 +28,7 @@ export const signup = async (req, res) => {
                 if (err) {
                     res.send("Error in generating token");
                 }
-                res.cookie('user', JSON.stringify(user), { httpOnly: false, secure: true });
+                res.cookie('user', JSON.stringify(user), { httpOnly: true, secure: true });
                 // Set the second cookie
                 res.cookie('authToken', token, {
                     httpOnly:true,
@@ -66,12 +66,12 @@ export const login = async (req, res) => {
                 if (err) {
                     res.send("Error in generating token");
                 }
-                res.cookie('user', JSON.stringify(user), { httpOnly: false, secure: true });
+                res.cookie('user', JSON.stringify(user), { httpOnly: true, secure: true });
                 // Set the second cookie
                 res.cookie('authToken', token, {
-                    httpOnly: false,
+                    httpOnly: true,
                     secure: true,
-                    sameSite:'none'
+                    sameSite:'None'
                 });
                 // Now send the response once after setting both cookies
                 return res.send({ token: token, user: user });
