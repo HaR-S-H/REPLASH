@@ -29,15 +29,15 @@ export const signup = async (req, res) => {
                     res.send("Error in generating token");
                 }
                 res.cookie('user', JSON.stringify(user), {
-                    // httpOnly: true,
-                    // secure: process.env.NODE_ENV === 'production', // Set secure cookies in production
-                    // sameSite: 'None', // Allow cookies to be sent across domains
+                    httpOnly: true,
+                    secure: process.env.NODE_ENV === 'production', // Set secure cookies in production
+                    sameSite: 'None', // Allow cookies to be sent across domains
                   });
                 // Set the second cookie
                 res.cookie('authToken', token, {
-                    // httpOnly: true,
-                    // secure: process.env.NODE_ENV === 'production', // Set secure cookies in production
-                    // sameSite: 'None', // Allow cookies to be sent across domains
+                    httpOnly: true,
+                    secure: process.env.NODE_ENV === 'production', // Set secure cookies in production
+                    sameSite: 'None', // Allow cookies to be sent across domains
                   });
                 // Now send the response once after setting both cookies
                 res.send({ token: token, user: user });
@@ -71,15 +71,15 @@ export const login = async (req, res) => {
                     res.send("Error in generating token");
                 }
                 res.cookie('user', JSON.stringify(user), {
-                    // httpOnly: true,
-                    // secure: process.env.NODE_ENV === 'production', // Set secure cookies in production
-                    // sameSite: 'None', // Allow cookies to be sent across domains
+                    httpOnly: true,
+                    secure: process.env.NODE_ENV === 'production', // Set secure cookies in production
+                    sameSite: 'None', // Allow cookies to be sent across domains
                   });
                 // Set the second cookie
                 res.cookie('authToken', token, {
-                    // httpOnly: true,
-                    // secure: process.env.NODE_ENV === 'production', // Set secure cookies in production
-                    // sameSite: 'None', // Allow cookies to be sent across domains
+                    httpOnly: true,
+                    secure: process.env.NODE_ENV === 'production', // Set secure cookies in production
+                    sameSite: 'None', // Allow cookies to be sent across domains
                   });
                 // Now send the response once after setting both cookies
                 return res.send({ token: token, user: user });
